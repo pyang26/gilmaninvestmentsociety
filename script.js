@@ -16,6 +16,14 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 window.addEventListener('scroll', () => {
     const sections = document.querySelectorAll('section');
     const navLinks = document.querySelectorAll('.nav-links a');
+    const navbar = document.querySelector('.navbar');
+    
+    // Add scrolled class to navbar
+    if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+    } else {
+        navbar.classList.remove('scrolled');
+    }
     
     let current = '';
     sections.forEach(section => {
@@ -32,6 +40,22 @@ window.addEventListener('scroll', () => {
             link.classList.add('active');
         }
     });
+
+    // Animate elements on scroll
+    const animateOnScroll = () => {
+        const elements = document.querySelectorAll('.card, .section-title');
+        elements.forEach(element => {
+            const elementTop = element.getBoundingClientRect().top;
+            const elementBottom = element.getBoundingClientRect().bottom;
+            
+            if (elementTop < window.innerHeight && elementBottom > 0) {
+                element.style.opacity = '1';
+                element.style.transform = 'translateY(0)';
+            }
+        });
+    };
+
+    animateOnScroll();
 });
 
 // Add mobile navigation toggle
@@ -59,4 +83,24 @@ const createMobileNav = () => {
 };
 
 // Initialize mobile navigation
-createMobileNav(); 
+createMobileNav();
+
+// Add parallax effect to hero section
+const hero = document.querySelector('.hero');
+if (hero) {
+    window.addEventListener('scroll', () => {
+        const scrolled = window.pageYOffset;
+        hero.style.backgroundPositionY = scrolled * 0.5 + 'px';
+    });
+}
+
+// Add hover effect to cards
+document.querySelectorAll('.card').forEach(card => {
+    card.addEventListener('mouseenter', () => {
+        card.style.transform = 'translateY(-10px)';
+    });
+    
+    card.addEventListener('mouseleave', () => {
+        card.style.transform = 'translateY(0)';
+    });
+}); 
