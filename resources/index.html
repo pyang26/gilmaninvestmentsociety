@@ -16,6 +16,54 @@
         .back-link:hover {
             text-decoration: underline;
         }
+
+        .resource-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .resource-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-decoration: none;
+            color: var(--text-color);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .resource-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .resource-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .resource-card p {
+            color: var(--secondary-color);
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+        }
+
+        .resource-card .btn {
+            align-self: flex-start;
+            margin-top: auto;
+        }
+
+        .section-description {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 3rem;
+            color: var(--secondary-color);
+        }
     </style>
 </head>
 <body>
@@ -35,7 +83,33 @@
         <div class="container">
             <a href="../index.html" class="back-link">← Back to Home</a>
             <h2 class="section-title">Educational Resources</h2>
-            <p>Coming soon...</p>
+            <p class="section-description">Access our comprehensive collection of educational materials, including presentations on investment basics, market analysis, and career guidance.</p>
+            
+            <div class="resource-grid">
+                <a href="https://docs.google.com/presentation/d/1vSrFLtIWHJqY5p0dVue4iad0x0gS7xEpHWQj175X2gM/edit?usp=sharing" target="_blank" class="resource-card">
+                    <h3>Pitching 101</h3>
+                    <p>Learn the fundamentals of creating and delivering effective investment pitches. This guide covers essential techniques for presenting your investment ideas with confidence and clarity.</p>
+                    <span class="btn">View Presentation</span>
+                </a>
+
+                <a href="https://docs.google.com/presentation/d/1MQ_jD066txgeVcdgDjr4eWZimTcTl7qnmi87JLLDwMg/edit?usp=sharing" target="_blank" class="resource-card">
+                    <h3>Dot-Com Bubble</h3>
+                    <p>Explore the history and lessons of the Dot-Com Bubble. Understand what happened, why it occurred, and how to identify similar market patterns in today's technology sector.</p>
+                    <span class="btn">View Presentation</span>
+                </a>
+
+                <a href="https://docs.google.com/presentation/d/1-MzeBUOn0Np-z3jEHeGLir3MALFGpvWywEl21VwLyKw/edit?usp=sharing" target="_blank" class="resource-card">
+                    <h3>Careers in Investing</h3>
+                    <p>Discover various career paths in the investment industry. Learn about different roles, required skills, and how to prepare for a successful career in finance.</p>
+                    <span class="btn">View Presentation</span>
+                </a>
+
+                <a href="https://docs.google.com/presentation/d/1mTEDznQoy9alpqO0N-8ebWsQXhE9NaFYT6ct_xElMfQ/edit?usp=sharing" target="_blank" class="resource-card">
+                    <h3>Analyzing a Company: The Basics</h3>
+                    <p>Master the fundamental techniques of company analysis. Learn how to evaluate financial statements, assess business models, and make informed investment decisions.</p>
+                    <span class="btn">View Presentation</span>
+                </a>
+            </div>
         </div>
     </section>
 
