@@ -1,1 +1,290 @@
-<h1>Gilman Investment Society</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gilman Investment Society</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        :root {
+            --primary-color: #1a365d;
+            --secondary-color: #2d3748;
+            --accent-color: #4299e1;
+            --text-color: #2d3748;
+            --light-bg: #f7fafc;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+        }
+
+        .navbar {
+            background-color: var(--primary-color);
+            padding: 1rem 2rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-color);
+        }
+
+        .hero {
+            background: linear-gradient(rgba(26, 54, 93, 0.9), rgba(26, 54, 93, 0.9)),
+                        url('https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 0 1rem;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+        }
+
+        .section {
+            padding: 5rem 2rem;
+        }
+
+        .section:nth-child(even) {
+            background-color: var(--light-bg);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--primary-color);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            background-color: var(--accent-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #3182ce;
+        }
+
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background-color: var(--primary-color);
+                padding: 1rem;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .nav-links.show {
+                display: flex;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+        }
+
+        /* Additional styles for mobile navigation */
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-content">
+            <a href="#" class="logo">Gilman Investment Society</a>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#events">Events</a>
+                <a href="#resources">Resources</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Gilman Investment Society</h1>
+            <p>Empowering students with financial literacy and investment knowledge</p>
+            <a href="#about" class="btn">Learn More</a>
+        </div>
+    </section>
+
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">About Us</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Our Mission</h3>
+                    <p>The Gilman Investment Society is dedicated to educating students about financial markets, investment strategies, and careers in finance.</p>
+                </div>
+                <div class="card">
+                    <h3>What We Do</h3>
+                    <p>Through regular meetings and competitions, we provide hands-on experience in stock analysis, portfolio management, and market research. Our members learn from alumni and gain real-world investment experience either through competitions or the committee.</p>
+                </div>
+                <div class="card">
+                    <h3>Join Us</h3>
+                    <p>Whether you're a beginner or have experience in investing, all students are welcome to join our community of learners and future financial leaders.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="events" class="section">
+        <div class="container">
+            <h2 class="section-title">Upcoming Events</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Weekly Meetings</h3>
+                    <p>Every Thursday at 2:55 PM in Lumen Center Classrooms</p>
+                </div>
+                <div class="card">
+                    <h3>Alumni Speaker Series</h3>
+                    <p>Presentations from finance professionals</p>
+                </div>
+                <div class="card">
+                    <h3>Investment Competition</h3>
+                    <p>Annual+quarterly stock market simulation challenges</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="resources" class="section">
+        <div class="container">
+            <h2 class="section-title">Resources</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Learning Materials</h3>
+                    <p>Access our collection of educational resources.</p>
+                </div>
+                <div class="card">
+                    <h3>Investment Tools</h3>
+                    <p>blank</p>
+                </div>
+                <div class="card">
+                    <h3>blank</h3>
+                    <p>blank</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title">Contact Us</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Location</h3>
+                    <p>Gilman School<br>5407 Roland Avenue<br>Baltimore, MD 21210</p>
+                </div>
+                <div class="card">
+                    <h3>Follow Us</h3>
+                    <p>Instagram: @gilman.investmentsociety</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; Website created by Peter Yang using Github sites</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
