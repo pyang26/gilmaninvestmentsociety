@@ -6,15 +6,26 @@
     <title>Resources - Gilman Investment Society</title>
     <link rel="stylesheet" href="../styles.css">
     <style>
+        :root {
+            --card-gradient-1: linear-gradient(135deg, #4a90e2, #357abd);
+            --card-gradient-2: linear-gradient(135deg, #50c878, #2e8b57);
+            --card-gradient-3: linear-gradient(135deg, #ff6b6b, #c92a2a);
+            --card-gradient-4: linear-gradient(135deg, #845ef7, #5f3dc4);
+        }
+
         .back-link {
             display: inline-block;
             margin-bottom: 2rem;
             color: var(--primary-color);
             text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
         }
 
         .back-link:hover {
-            text-decoration: underline;
+            text-decoration: none;
+            color: var(--accent-color);
+            transform: translateX(-5px);
         }
 
         .resource-grid {
@@ -27,35 +38,115 @@
         .resource-card {
             background: white;
             padding: 2rem;
-            border-radius: 8px;
+            border-radius: 12px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            transition: all 0.3s ease;
             text-decoration: none;
             color: var(--text-color);
             display: flex;
             flex-direction: column;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .resource-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            transition: height 0.3s ease;
+        }
+
+        .resource-card:nth-child(1)::before {
+            background: var(--card-gradient-1);
+        }
+
+        .resource-card:nth-child(2)::before {
+            background: var(--card-gradient-2);
+        }
+
+        .resource-card:nth-child(3)::before {
+            background: var(--card-gradient-3);
+        }
+
+        .resource-card:nth-child(4)::before {
+            background: var(--card-gradient-4);
         }
 
         .resource-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+            transform: translateY(-10px);
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .resource-card:hover::before {
+            height: 8px;
         }
 
         .resource-card h3 {
             color: var(--primary-color);
             margin-bottom: 1rem;
             font-size: 1.5rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        .resource-card:nth-child(1) h3 {
+            color: #4a90e2;
+        }
+
+        .resource-card:nth-child(2) h3 {
+            color: #2e8b57;
+        }
+
+        .resource-card:nth-child(3) h3 {
+            color: #c92a2a;
+        }
+
+        .resource-card:nth-child(4) h3 {
+            color: #5f3dc4;
         }
 
         .resource-card p {
             color: var(--secondary-color);
             margin-bottom: 1.5rem;
             flex-grow: 1;
+            line-height: 1.6;
         }
 
         .resource-card .btn {
             align-self: flex-start;
             margin-top: auto;
+            background: var(--primary-color);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 6px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .resource-card:nth-child(1) .btn {
+            background: #4a90e2;
+        }
+
+        .resource-card:nth-child(2) .btn {
+            background: #2e8b57;
+        }
+
+        .resource-card:nth-child(3) .btn {
+            background: #c92a2a;
+        }
+
+        .resource-card:nth-child(4) .btn {
+            background: #5f3dc4;
+        }
+
+        .resource-card .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
         }
 
         .section-description {
@@ -63,6 +154,21 @@
             max-width: 800px;
             margin: 0 auto 3rem;
             color: var(--secondary-color);
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        .section-title {
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: inline-block;
+        }
+
+        @media (max-width: 768px) {
+            .resource-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
