@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Past Pitches - Gilman Investment Society</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        :root {
+            --card-gradient-1: linear-gradient(135deg, #4a90e2, #357abd);
+            --card-gradient-2: linear-gradient(135deg, #50c878, #2e8b57);
+            --card-gradient-3: linear-gradient(135deg, #ff6b6b, #c92a2a);
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 2rem;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .back-link:hover {
+            text-decoration: none;
+            color: var(--accent-color);
+            transform: translateX(-5px);
+        }
+
+        .pitch-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .pitch-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: var(--text-color);
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pitch-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            transition: height 0.3s ease;
+        }
+
+        .pitch-card:nth-child(1)::before {
+            background: var(--card-gradient-1);
+        }
+
+        .pitch-card:nth-child(2)::before {
+            background: var(--card-gradient-2);
+        }
+
+        .pitch-card:nth-child(3)::before {
+            background: var(--card-gradient-3);
+        }
+
+        .pitch-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .pitch-card:hover::before {
+            height: 8px;
+        }
+
+        .pitch-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        .pitch-card:nth-child(1) h3 {
+            color: #4a90e2;
+        }
+
+        .pitch-card:nth-child(2) h3 {
+            color: #2e8b57;
+        }
+
+        .pitch-card:nth-child(3) h3 {
+            color: #c92a2a;
+        }
+
+        .pitch-card p {
+            color: var(--secondary-color);
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+            line-height: 1.6;
+        }
+
+        .pitch-card .btn {
+            align-self: flex-start;
+            margin-top: auto;
+            background: var(--primary-color);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 6px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pitch-card:nth-child(1) .btn {
+            background: #4a90e2;
+        }
+
+        .pitch-card:nth-child(2) .btn {
+            background: #2e8b57;
+        }
+
+        .pitch-card:nth-child(3) .btn {
+            background: #c92a2a;
+        }
+
+        .pitch-card .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .section-description {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 3rem;
+            color: var(--secondary-color);
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        .section-title {
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: inline-block;
+        }
+
+        @media (max-width: 768px) {
+            .pitch-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-content">
+            <a href="../index.html" class="logo">Gilman Investment Society</a>
+            <div class="nav-links">
+                <a href="../index.html#about">About</a>
+                <a href="../index.html#events">Events</a>
+                <a href="../index.html#resources">Resources</a>
+                <a href="../index.html#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="section" style="margin-top: 80px;">
+        <div class="container">
+            <a href="../index.html" class="back-link">← Back to Home</a>
+            <h2 class="section-title">Past Pitches</h2>
+            <p class="section-description">Explore our collection of past investment pitches, including committee admission pitches and regular committee presentations.</p>
+            
+            <div class="pitch-grid">
+                <a href="https://docs.google.com/presentation/d/1W9UtxGe5vpq7_WIyC_rouYJGoUPaagGPoZFybUUweh8/edit?usp=sharing" target="_blank" class="pitch-card">
+                    <h3>Cleveland Cliffs (CLF)</h3>
+                    <p>A comprehensive analysis of Cleveland Cliffs, a leading producer of flat-rolled steel and iron ore pellets in North America.</p>
+                    <span class="btn">View Presentation</span>
+                </a>
+
+                <a href="https://docs.google.com/presentation/d/1kkHyZpwDLRAFbBfkHdyZWVNyLXyq0sJbVuUXL_UxZfs/edit?usp=sharing" target="_blank" class="pitch-card">
+                    <h3>North American Construction Group</h3>
+                    <p>An in-depth look at North American Construction Group, a leading provider of heavy construction and mining services.</p>
+                    <span class="btn">View Presentation</span>
+                </a>
+
+                <a href="https://docs.google.com/presentation/d/11IUj_tzJCqHtSyE0ehMaE7W6Zy7bbSVLX0EO9iueniA/edit?usp=sharing" target="_blank" class="pitch-card">
+                    <h3>Oracle Corp (ORCL)</h3>
+                    <p>A detailed analysis of Oracle Corporation, a global leader in cloud infrastructure and enterprise software solutions.</p>
+                    <span class="btn">View Presentation</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; Website created by Peter Yang using Github sites</p>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html> 
