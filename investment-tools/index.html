@@ -3,13 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resources - Gilman Investment Society</title>
+    <title>Investment Tools - Gilman Investment Society</title>
     <link rel="stylesheet" href="../styles.css">
     <style>
         :root {
             --card-gradient-1: linear-gradient(135deg, #4a90e2, #357abd);
             --card-gradient-2: linear-gradient(135deg, #50c878, #2e8b57);
-            --card-gradient-3: linear-gradient(135deg, #ff6b6b, #c92a2a);
         }
 
         .back-link {
@@ -27,24 +26,28 @@
             transform: translateX(-5px);
         }
 
-        .resources-grid {
+        .tools-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
             margin-top: 2rem;
         }
 
-        .resource-card {
+        .tool-card {
             background: white;
             padding: 2rem;
             border-radius: 12px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             transition: all 0.3s ease;
+            text-decoration: none;
+            color: var(--text-color);
+            display: flex;
+            flex-direction: column;
             position: relative;
             overflow: hidden;
         }
 
-        .resource-card::before {
+        .tool-card::before {
             content: '';
             position: absolute;
             top: 0;
@@ -52,30 +55,19 @@
             width: 100%;
             height: 5px;
             transition: height 0.3s ease;
-        }
-
-        .resource-card:nth-child(1)::before {
             background: var(--card-gradient-1);
         }
 
-        .resource-card:nth-child(2)::before {
-            background: var(--card-gradient-2);
-        }
-
-        .resource-card:nth-child(3)::before {
-            background: var(--card-gradient-3);
-        }
-
-        .resource-card:hover {
+        .tool-card:hover {
             transform: translateY(-10px);
             box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
         }
 
-        .resource-card:hover::before {
+        .tool-card:hover::before {
             height: 8px;
         }
 
-        .resource-card h3 {
+        .tool-card h3 {
             color: var(--primary-color);
             margin-bottom: 1rem;
             font-size: 1.5rem;
@@ -83,48 +75,43 @@
             padding-bottom: 0.5rem;
         }
 
-        .resource-card:nth-child(1) h3 {
+        .tool-card:nth-child(1) h3 {
             color: #4a90e2;
         }
 
-        .resource-card:nth-child(2) h3 {
+        .tool-card:nth-child(2) h3 {
             color: #2e8b57;
         }
 
-        .resource-card:nth-child(3) h3 {
-            color: #c92a2a;
-        }
-
-        .resource-card p {
+        .tool-card p {
             color: var(--secondary-color);
             margin-bottom: 1.5rem;
+            flex-grow: 1;
             line-height: 1.6;
         }
 
-        .resource-card .btn {
-            display: inline-block;
-            padding: 0.8rem 1.5rem;
+        .tool-card .btn {
+            align-self: flex-start;
+            margin-top: auto;
             background: var(--primary-color);
             color: white;
-            text-decoration: none;
+            padding: 0.8rem 1.5rem;
             border-radius: 6px;
             font-weight: 500;
             transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
         }
 
-        .resource-card:nth-child(1) .btn {
+        .tool-card:nth-child(1) .btn {
             background: #4a90e2;
         }
 
-        .resource-card:nth-child(2) .btn {
+        .tool-card:nth-child(2) .btn {
             background: #2e8b57;
         }
 
-        .resource-card:nth-child(3) .btn {
-            background: #c92a2a;
-        }
-
-        .resource-card .btn:hover {
+        .tool-card .btn:hover {
             transform: translateY(-2px);
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
         }
@@ -145,8 +132,12 @@
             display: inline-block;
         }
 
+        .tool-card:nth-child(2)::before {
+            background: var(--card-gradient-2);
+        }
+
         @media (max-width: 768px) {
-            .resources-grid {
+            .tools-grid {
                 grid-template-columns: 1fr;
             }
         }
@@ -159,7 +150,7 @@
             <div class="nav-links">
                 <a href="../index.html#about">About</a>
                 <a href="../events/index.html">Events</a>
-                <a href="index.html">Resources</a>
+                <a href="../resources/index.html">Resources</a>
                 <a href="../index.html#contact">Contact</a>
             </div>
         </div>
@@ -168,27 +159,21 @@
     <section class="section" style="margin-top: 80px;">
         <div class="container">
             <a href="../index.html" class="back-link">← Back to Home</a>
-            <h2 class="section-title">Resources</h2>
-            <p class="section-description">Access our comprehensive collection of educational materials, investment tools, and past pitches to enhance your investment knowledge and skills.</p>
+            <h2 class="section-title">Investment Tools</h2>
+            <p class="section-description">Access our collection of professional investment tools and models to help with your analysis and decision-making.</p>
             
-            <div class="resources-grid">
-                <div class="resource-card">
-                    <h3>Learning Materials</h3>
-                    <p>Access our collection of educational resources, including presentations on investment basics, market analysis, and career guidance.</p>
-                    <a href="learning-materials/index.html" class="btn">View Materials</a>
-                </div>
+            <div class="tools-grid">
+                <a href="https://docs.google.com/spreadsheets/d/1C1f9jNVpoECqmvCOO93zTZUZNkhETrfuaMkD-OvNg7o/edit?usp=sharing" target="_blank" class="tool-card">
+                    <h3>DCF Model Template</h3>
+                    <p>A comprehensive Discounted Cash Flow (DCF) model template for company valuation. Includes sensitivity analysis, WACC calculation, and multiple valuation methods. Make sure to create a copy before use.</p>
+                    <span class="btn">View Template</span>
+                </a>
 
-                <div class="resource-card">
-                    <h3>Investment Tools</h3>
-                    <p>Explore our custom models and tools, including our DCF model template and other resources for investment analysis.</p>
-                    <a href="investment-tools/index.html" class="btn">View Tools</a>
-                </div>
-
-                <div class="resource-card">
-                    <h3>Past Pitches</h3>
-                    <p>Review our collection of past investment pitches, including committee admission pitches and regular committee presentations.</p>
-                    <a href="past-pitches/index.html" class="btn">View Pitches</a>
-                </div>
+                <a href="https://docs.google.com/document/d/1X-RjynrPUA-UdMvpTRQx_tEKC60fRYz12Z7VI8eyXnI/edit?usp=sharing" target="_blank" class="tool-card">
+                    <h3>DCF Construction Fundamentals</h3>
+                    <p>A detailed guide explaining the fundamentals of building a DCF model, including key concepts, formulas, and best practices for accurate company valuation.</p>
+                    <span class="btn">View Guide</span>
+                </a>
             </div>
         </div>
     </section>

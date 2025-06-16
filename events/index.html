@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resources - Gilman Investment Society</title>
+    <title>Events - Gilman Investment Society</title>
     <link rel="stylesheet" href="../styles.css">
     <style>
         :root {
@@ -27,14 +27,14 @@
             transform: translateX(-5px);
         }
 
-        .resources-grid {
+        .events-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
             margin-top: 2rem;
         }
 
-        .resource-card {
+        .event-card {
             background: white;
             padding: 2rem;
             border-radius: 12px;
@@ -44,7 +44,7 @@
             overflow: hidden;
         }
 
-        .resource-card::before {
+        .event-card::before {
             content: '';
             position: absolute;
             top: 0;
@@ -54,28 +54,28 @@
             transition: height 0.3s ease;
         }
 
-        .resource-card:nth-child(1)::before {
+        .event-card:nth-child(1)::before {
             background: var(--card-gradient-1);
         }
 
-        .resource-card:nth-child(2)::before {
+        .event-card:nth-child(2)::before {
             background: var(--card-gradient-2);
         }
 
-        .resource-card:nth-child(3)::before {
+        .event-card:nth-child(3)::before {
             background: var(--card-gradient-3);
         }
 
-        .resource-card:hover {
+        .event-card:hover {
             transform: translateY(-10px);
             box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
         }
 
-        .resource-card:hover::before {
+        .event-card:hover::before {
             height: 8px;
         }
 
-        .resource-card h3 {
+        .event-card h3 {
             color: var(--primary-color);
             margin-bottom: 1rem;
             font-size: 1.5rem;
@@ -83,50 +83,22 @@
             padding-bottom: 0.5rem;
         }
 
-        .resource-card:nth-child(1) h3 {
+        .event-card:nth-child(1) h3 {
             color: #4a90e2;
         }
 
-        .resource-card:nth-child(2) h3 {
+        .event-card:nth-child(2) h3 {
             color: #2e8b57;
         }
 
-        .resource-card:nth-child(3) h3 {
+        .event-card:nth-child(3) h3 {
             color: #c92a2a;
         }
 
-        .resource-card p {
+        .event-card p {
             color: var(--secondary-color);
-            margin-bottom: 1.5rem;
+            margin-bottom: 1rem;
             line-height: 1.6;
-        }
-
-        .resource-card .btn {
-            display: inline-block;
-            padding: 0.8rem 1.5rem;
-            background: var(--primary-color);
-            color: white;
-            text-decoration: none;
-            border-radius: 6px;
-            font-weight: 500;
-            transition: all 0.3s ease;
-        }
-
-        .resource-card:nth-child(1) .btn {
-            background: #4a90e2;
-        }
-
-        .resource-card:nth-child(2) .btn {
-            background: #2e8b57;
-        }
-
-        .resource-card:nth-child(3) .btn {
-            background: #c92a2a;
-        }
-
-        .resource-card .btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
         }
 
         .section-description {
@@ -146,7 +118,7 @@
         }
 
         @media (max-width: 768px) {
-            .resources-grid {
+            .events-grid {
                 grid-template-columns: 1fr;
             }
         }
@@ -158,8 +130,8 @@
             <a href="../index.html" class="logo">Gilman Investment Society</a>
             <div class="nav-links">
                 <a href="../index.html#about">About</a>
-                <a href="../events/index.html">Events</a>
-                <a href="index.html">Resources</a>
+                <a href="index.html">Events</a>
+                <a href="../resources/index.html">Resources</a>
                 <a href="../index.html#contact">Contact</a>
             </div>
         </div>
@@ -168,26 +140,26 @@
     <section class="section" style="margin-top: 80px;">
         <div class="container">
             <a href="../index.html" class="back-link">← Back to Home</a>
-            <h2 class="section-title">Resources</h2>
-            <p class="section-description">Access our comprehensive collection of educational materials, investment tools, and past pitches to enhance your investment knowledge and skills.</p>
+            <h2 class="section-title">Events</h2>
+            <p class="section-description">Stay updated with our upcoming events and regular activities. Join us to learn, network, and grow your investment knowledge.</p>
             
-            <div class="resources-grid">
-                <div class="resource-card">
-                    <h3>Learning Materials</h3>
-                    <p>Access our collection of educational resources, including presentations on investment basics, market analysis, and career guidance.</p>
-                    <a href="learning-materials/index.html" class="btn">View Materials</a>
+            <div class="events-grid">
+                <div class="event-card">
+                    <h3>Weekly Meetings</h3>
+                    <p>Every Thursday at 2:55 PM in Lumen Center Classrooms</p>
+                    <p>Join us for our regular meetings where we discuss market trends, analyze stocks, and learn from each other's insights.</p>
                 </div>
 
-                <div class="resource-card">
-                    <h3>Investment Tools</h3>
-                    <p>Explore our custom models and tools, including our DCF model template and other resources for investment analysis.</p>
-                    <a href="investment-tools/index.html" class="btn">View Tools</a>
+                <div class="event-card">
+                    <h3>Alumni Speaker Series</h3>
+                    <p>Presentations from alumni of the Gilman Investment Committee</p>
+                    <p>These alumni are currently working in finance and share their experiences, insights, and career advice with our members.</p>
                 </div>
 
-                <div class="resource-card">
-                    <h3>Past Pitches</h3>
-                    <p>Review our collection of past investment pitches, including committee admission pitches and regular committee presentations.</p>
-                    <a href="past-pitches/index.html" class="btn">View Pitches</a>
+                <div class="event-card">
+                    <h3>Investment Competition</h3>
+                    <p>Annual+quarterly stock market simulation challenges</p>
+                    <p>Our most recent competition had $100+ in prizes! Test your investment skills and compete with your peers in a simulated market environment.</p>
                 </div>
             </div>
         </div>
