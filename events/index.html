@@ -7,18 +7,19 @@
     <link rel="stylesheet" href="../styles.css">
     <style>
         :root {
-            --card-gradient-1: linear-gradient(135deg, #4a90e2, #357abd);
-            --card-gradient-2: linear-gradient(135deg, #50c878, #2e8b57);
-            --card-gradient-3: linear-gradient(135deg, #ff6b6b, #c92a2a);
+            --card-gradient-1: linear-gradient(135deg, #2563eb, #1d4ed8);
+            --card-gradient-2: linear-gradient(135deg, #059669, #047857);
+            --card-gradient-3: linear-gradient(135deg, #dc2626, #b91c1c);
         }
 
         .back-link {
-            display: inline-block;
-            margin-bottom: 2rem;
+            display: block;
+            margin-bottom: 1rem;
             color: var(--primary-color);
             text-decoration: none;
             font-weight: 500;
             transition: all 0.3s ease;
+            font-size: 1.1rem;
         }
 
         .back-link:hover {
@@ -27,17 +28,40 @@
             transform: translateX(-5px);
         }
 
+        .page-header {
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            margin: 1rem 0;
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: inline-block;
+        }
+
+        .section-description {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 3rem;
+            color: var(--secondary-color);
+            font-size: 1.2rem;
+            line-height: 1.8;
+        }
+
         .events-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.5rem;
             margin-top: 2rem;
         }
 
         .event-card {
             background: white;
-            padding: 2rem;
-            border-radius: 12px;
+            padding: 2.5rem;
+            border-radius: 16px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             transition: all 0.3s ease;
             position: relative;
@@ -50,76 +74,46 @@
             top: 0;
             left: 0;
             width: 100%;
-            height: 5px;
+            height: 6px;
             transition: height 0.3s ease;
-        }
-
-        .event-card:nth-child(1)::before {
-            background: var(--card-gradient-1);
-        }
-
-        .event-card:nth-child(2)::before {
-            background: var(--card-gradient-2);
-        }
-
-        .event-card:nth-child(3)::before {
-            background: var(--card-gradient-3);
         }
 
         .event-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
         }
 
         .event-card:hover::before {
-            height: 8px;
+            height: 10px;
         }
 
         .event-card h3 {
             color: var(--primary-color);
-            margin-bottom: 1rem;
-            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            font-size: 1.75rem;
             position: relative;
-            padding-bottom: 0.5rem;
-        }
-
-        .event-card:nth-child(1) h3 {
-            color: #4a90e2;
-        }
-
-        .event-card:nth-child(2) h3 {
-            color: #2e8b57;
-        }
-
-        .event-card:nth-child(3) h3 {
-            color: #c92a2a;
+            padding-bottom: 0.75rem;
         }
 
         .event-card p {
             color: var(--secondary-color);
             margin-bottom: 1rem;
-            line-height: 1.6;
-        }
-
-        .section-description {
-            text-align: center;
-            max-width: 800px;
-            margin: 0 auto 3rem;
-            color: var(--secondary-color);
+            line-height: 1.8;
             font-size: 1.1rem;
-            line-height: 1.6;
-        }
-
-        .section-title {
-            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            display: inline-block;
         }
 
         @media (max-width: 768px) {
             .events-grid {
                 grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .section-description {
+                font-size: 1.1rem;
             }
         }
     </style>
@@ -139,9 +133,11 @@
 
     <section class="section" style="margin-top: 80px;">
         <div class="container">
-            <a href="../index.html" class="back-link">← Back to Home</a>
-            <h2 class="section-title">Events</h2>
-            <p class="section-description">Stay updated with our upcoming events and regular activities. Join us to learn, network, and grow your investment knowledge.</p>
+            <div class="page-header">
+                <a href="../index.html" class="back-link">← Back to Home</a>
+                <h2 class="section-title">Events</h2>
+                <p class="section-description">Stay updated with our upcoming events and regular activities. Join us to learn, network, and grow your investment knowledge.</p>
+            </div>
             
             <div class="events-grid">
                 <div class="event-card">
