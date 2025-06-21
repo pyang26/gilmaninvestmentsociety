@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Competition Results - Gilman Investment Society</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        .back-link {
+            display: block;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            font-size: 1.1rem;
+        }
+
+        .back-link:hover {
+            text-decoration: none;
+            color: var(--accent-color);
+            transform: translateX(-5px);
+        }
+
+        .page-header {
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            margin: 1rem 0;
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: inline-block;
+        }
+
+        .section-description {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 3rem;
+            color: var(--secondary-color);
+            font-size: 1.2rem;
+            line-height: 1.8;
+        }
+
+        .results-container {
+            margin-top: 2rem;
+        }
+
+        .competition-section {
+            margin-bottom: 4rem;
+        }
+
+        .competition-title {
+            font-size: 2rem;
+            color: var(--primary-color);
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .leaderboard-image {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            margin: 0 auto;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-content">
+            <a href="../index.html" class="logo">Gilman Investment Society</a>
+            <div class="nav-links">
+                <a href="../index.html#about">About</a>
+                <a href="index.html">Events</a>
+                <a href="../resources/index.html">Resources</a>
+                <a href="../index.html#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="section" style="margin-top: 80px;">
+        <div class="container">
+            <div class="page-header">
+                <a href="index.html" class="back-link">← Back to Events</a>
+                <h2 class="section-title">Investment Competition Results</h2>
+                <p class="section-description">Check out the leaderboards from our past investment competitions.</p>
+            </div>
+
+            <div class="results-container">
+                <div class="competition-section">
+                    <h3 class="competition-title">2024-2025 Yearly Competition</h3>
+                    <img src="../assets/images/2024-2025-competition.png" alt="2024-2025 Competition Leaderboard" class="leaderboard-image">
+                </div>
+
+                <div class="competition-section">
+                    <h3 class="competition-title">2023-2024 Yearly Competition</h3>
+                    <img src="../assets/images/2023-2024-competition.png" alt="2023-2024 Competition Leaderboard" class="leaderboard-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; Website created by Peter Yang using Github sites</p>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html> 

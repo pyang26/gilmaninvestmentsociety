@@ -102,6 +102,24 @@
             font-size: 1.1rem;
         }
 
+        .event-card .btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            font-size: 1.1rem;
+            margin-top: 1rem;
+        }
+
+        .event-card .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
         @media (max-width: 768px) {
             .events-grid {
                 grid-template-columns: 1fr;
@@ -154,8 +172,9 @@
 
                 <div class="event-card">
                     <h3>Investment Competition</h3>
-                    <p>Annual and quarterly stock market simulation challenges</p>
-                    <p>Our most recent competition had $100+ in prizes! Test your investment skills and compete with your peers in a simulated market environment using Investopedia's stock market simulator.</p>
+                    <p>Annual+quarterly stock market simulation challenges</p>
+                    <p>Our most recent competition had $100+ in prizes! Test your investment skills and compete with your peers in a simulated market environment.</p>
+                    <a href="competition-results.html" class="btn">View Results</a>
                 </div>
             </div>
         </div>
