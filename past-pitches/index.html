@@ -10,6 +10,16 @@
             --card-gradient-1: linear-gradient(135deg, #2563eb, #1d4ed8);
             --card-gradient-2: linear-gradient(135deg, #059669, #047857);
             --card-gradient-3: linear-gradient(135deg, #dc2626, #b91c1c);
+            --card-gradient-4: linear-gradient(135deg, #7c3aed, #5b21b6);
+            --card-gradient-5: linear-gradient(135deg, #ea580c, #c2410c);
+            --card-gradient-6: linear-gradient(135deg, #0891b2, #0e7490);
+            --card-gradient-7: linear-gradient(135deg, #be185d, #9d174d);
+            --card-gradient-8: linear-gradient(135deg, #059669, #047857);
+            --card-gradient-9: linear-gradient(135deg, #dc2626, #b91c1c);
+            --card-gradient-10: linear-gradient(135deg, #2563eb, #1d4ed8);
+            --card-gradient-11: linear-gradient(135deg, #7c3aed, #5b21b6);
+            --card-gradient-12: linear-gradient(135deg, #ea580c, #c2410c);
+            --card-gradient-13: linear-gradient(135deg, #0891b2, #0e7490);
         }
 
         .back-link {
@@ -49,6 +59,36 @@
             color: var(--secondary-color);
             font-size: 1.2rem;
             line-height: 1.8;
+        }
+
+        .subsection-title {
+            font-size: 2rem;
+            margin: 3rem 0 2rem;
+            color: var(--primary-color);
+            text-align: center;
+            position: relative;
+            padding-bottom: 1rem;
+        }
+
+        .subsection-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: var(--accent-color);
+        }
+
+        .archives-description {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+            color: var(--secondary-color);
+            font-size: 1.1rem;
+            line-height: 1.6;
+            font-style: italic;
         }
 
         .pitch-grid {
@@ -139,6 +179,10 @@
             .section-description {
                 font-size: 1.1rem;
             }
+
+            .subsection-title {
+                font-size: 1.75rem;
+            }
         }
     </style>
 </head>
@@ -179,6 +223,82 @@
                 <a href="https://docs.google.com/presentation/d/11IUj_tzJCqHtSyE0ehMaE7W6Zy7bbSVLX0EO9iueniA/edit?usp=sharing" target="_blank" class="pitch-card">
                     <h3>Oracle Corp (ORCL)</h3>
                     <p>A detailed analysis of Oracle Corporation, a global leader in cloud infrastructure and enterprise software solutions.</p>
+                    <span class="btn">View Presentation</span>
+                </a>
+            </div>
+
+            <h3 class="subsection-title">Archives</h3>
+            <p class="archives-description">Historical presentations from 2+ years ago. These older pitches provide valuable insights into past investment analyses and market perspectives.</p>
+            <p class="archives-description" style="font-size: 0.9rem; margin-top: -1rem;">Pitches compiled by Thomas L. '24</p>
+            
+            <div class="pitch-grid">
+                <a href="https://docs.google.com/presentation/d/1W9UtxGe5vpq7_WIyC_rouYJGoUPaagGPoZFybUUweh8/edit?usp=sharing" target="_blank" class="pitch-card">
+                    <h3>Cleveland Cliffs (CLF) - Archive</h3>
+                    <p>Historical analysis of Cleveland Cliffs from our archives, showcasing the evolution of investment analysis techniques.</p>
+                    <p style="font-size: 0.9rem; color: #666; margin-top: -1rem; margin-bottom: 1rem;"><em>Author unknown</em></p>
+                    <span class="btn">View Presentation</span>
+                </a>
+
+                <a href="https://docs.google.com/presentation/d/1XoPwOV0PpJgbA27_2YeG-n9XBb2Av-sBS1C5Gm-hsCE/edit?usp=sharing" target="_blank" class="pitch-card">
+                    <h3>Medtronic (MDT)</h3>
+                    <p>Historical analysis of Medtronic, a global leader in medical technology and healthcare solutions.</p>
+                    <p style="font-size: 0.9rem; color: #666; margin-top: -1rem; margin-bottom: 1rem;"><em>By Nick H. '24</em></p>
+                    <span class="btn">View Presentation</span>
+                </a>
+
+                <a href="https://docs.google.com/presentation/d/1RHlrR6YI8TC_hxs2ahN47NwxgOjRRNnDJSURt0Xxroo/edit?usp=sharing" target="_blank" class="pitch-card">
+                    <h3>Cheesecake Factory</h3>
+                    <p>Historical analysis of The Cheesecake Factory, examining the restaurant industry and consumer discretionary sector.</p>
+                    <p style="font-size: 0.9rem; color: #666; margin-top: -1rem; margin-bottom: 1rem;"><em>By Paul S. '24 and Owen P. '24</em></p>
+                    <span class="btn">View Presentation</span>
+                </a>
+
+                <a href="https://docs.google.com/presentation/d/1Ci63NPr7ny7MB1ZFot250M7f5ejKs2X4OQDMLCsUdfU/edit?usp=sharing" target="_blank" class="pitch-card">
+                    <h3>Financial Stock Pitch</h3>
+                    <p>Historical financial sector analysis from our archives, demonstrating past approaches to financial services investment.</p>
+                    <p style="font-size: 0.9rem; color: #666; margin-top: -1rem; margin-bottom: 1rem;"><em>Author unknown</em></p>
+                    <span class="btn">View Presentation</span>
+                </a>
+
+                <a href="https://docs.google.com/presentation/d/1lzYUYHsf7N2OgXXULBu2tun0bCXPgxT8Rkuc8jBY2BE/edit?usp=sharing" target="_blank" class="pitch-card">
+                    <h3>Lockheed Martin Corporation</h3>
+                    <p>Historical analysis of Lockheed Martin, a leading aerospace and defense company.</p>
+                    <p style="font-size: 0.9rem; color: #666; margin-top: -1rem; margin-bottom: 1rem;"><em>By Chris G. '25 and Thomas L. '24</em></p>
+                    <span class="btn">View Presentation</span>
+                </a>
+
+                <a href="https://docs.google.com/presentation/d/1kkHyZpwDLRAFbBfkHdyZWVNyLXyq0sJbVuUXL_UxZfs/edit?usp=sharing" target="_blank" class="pitch-card">
+                    <h3>North American Construction Group - Archive</h3>
+                    <p>Historical analysis of North American Construction Group from our archives, showing past construction sector analysis.</p>
+                    <p style="font-size: 0.9rem; color: #666; margin-top: -1rem; margin-bottom: 1rem;"><em>By Nikhil G. '26 and Jackson A. '26</em></p>
+                    <span class="btn">View Presentation</span>
+                </a>
+
+                <a href="https://docs.google.com/presentation/d/1toOoiwBx06U4hx-rY1KZJqe0_ylkWmI-FqyWKIg1X2o/edit?usp=sharing" target="_blank" class="pitch-card">
+                    <h3>Signature Bank (SBNY)</h3>
+                    <p>Historical analysis of Signature Bank, examining the regional banking sector and financial services industry.</p>
+                    <p style="font-size: 0.9rem; color: #666; margin-top: -1rem; margin-bottom: 1rem;"><em>Author unknown</em></p>
+                    <span class="btn">View Presentation</span>
+                </a>
+
+                <a href="https://docs.google.com/presentation/d/1-HesDShef8OLvg6fUiHIsuAf-KucsRQmQXuTE_c9KeQ/edit?usp=sharing" target="_blank" class="pitch-card">
+                    <h3>Southwest Airlines</h3>
+                    <p>Historical analysis of Southwest Airlines with the theme "Flight to the MOON," examining the airline industry and travel sector.</p>
+                    <p style="font-size: 0.9rem; color: #666; margin-top: -1rem; margin-bottom: 1rem;"><em>Author unknown</em></p>
+                    <span class="btn">View Presentation</span>
+                </a>
+
+                <a href="https://docs.google.com/presentation/d/1r0z5IEEeAsDP3wVwFeuC16fgYBEAJwRKYq6781OWIUo/edit?usp=sharing" target="_blank" class="pitch-card">
+                    <h3>Square (SQ)</h3>
+                    <p>Historical analysis of Square by AMIOT/LEE from February 1st, examining the fintech and digital payments sector.</p>
+                    <p style="font-size: 0.9rem; color: #666; margin-top: -1rem; margin-bottom: 1rem;"><em>Author unknown</em></p>
+                    <span class="btn">View Presentation</span>
+                </a>
+
+                <a href="https://docs.google.com/presentation/d/1BwlxmUzvXhyhr1sYfV2uNlhJ_jSPvwHAWnmfrgRjVRo/edit?usp=sharing" target="_blank" class="pitch-card">
+                    <h3>Vertex Pharmaceuticals</h3>
+                    <p>Historical analysis of Vertex Pharmaceuticals, examining the biotechnology and pharmaceutical industry.</p>
+                    <p style="font-size: 0.9rem; color: #666; margin-top: -1rem; margin-bottom: 1rem;"><em>By Rohan and Krishna</em></p>
                     <span class="btn">View Presentation</span>
                 </a>
             </div>
